@@ -35,6 +35,10 @@
         // Create the log in view controller
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
         [logInViewController setDelegate:self]; // Set ourselves as the delegate
+        UILabel *logo = [[UILabel alloc] init];
+        logo.text = @"Give Up Your Dream";
+        [logo setFont:[UIFont boldSystemFontOfSize:24]];
+        logInViewController.logInView.logo = logo;
 
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
