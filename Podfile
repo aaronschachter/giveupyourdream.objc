@@ -2,7 +2,8 @@
 # platform :ios, '6.0'
 
 target 'giveupyourdream' do
-pod 'Parse'
+    pod 'Parse'
+    pod 'ParseUI'
 end
 
 target 'giveupyourdreamTests' do
