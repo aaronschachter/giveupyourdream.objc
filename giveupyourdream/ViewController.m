@@ -35,14 +35,18 @@
         // Create the log in view controller
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
         [logInViewController setDelegate:self]; // Set ourselves as the delegate
-        UILabel *logo = [[UILabel alloc] init];
-        logo.text = @"Give Up Your Dream";
-        [logo setFont:[UIFont boldSystemFontOfSize:24]];
-        logInViewController.logInView.logo = logo;
+        UILabel *loginLogo = [[UILabel alloc] init];
+        loginLogo.text = @"Give Up Your Dream";
+        [loginLogo setFont:[UIFont boldSystemFontOfSize:24]];
+        logInViewController.logInView.logo = loginLogo;
 
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
         [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+        UILabel *signupLogo = [[UILabel alloc] init];
+        signupLogo.text = @"Give Up Your Dream";
+        [signupLogo setFont:[UIFont boldSystemFontOfSize:24]];
+        signUpViewController.signUpView.logo = signupLogo;
 
         // Assign our sign up controller to be displayed from the login controller
         [logInViewController setSignUpController:signUpViewController];
@@ -72,6 +76,34 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark - PFSignUpViewControllerDelegate
+
+// Sent to the delegate to determine whether the sign up request should be submitted to the server.
+- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
+    BOOL informationComplete = YES;
+
+    // loop through all of the submitted data
+    for (id key in info) {
+        NSString *field = [info objectForKey:key];
+        if (!field || !field.length) { // check completion
+            informationComplete = NO;
+            break;
+        }
+    }
+
+    // Display an alert if a field wasn't completed
+    if (!informationComplete) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+    }
+
+    return informationComplete;
+}
+
+// Sent to the delegate when a PFUser is signed up.
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
