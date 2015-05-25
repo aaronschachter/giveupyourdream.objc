@@ -53,6 +53,7 @@
     NSLog(@"%@", self.activities);
     NSLog(@"%@", activity);
     cell.textLabel.text = activity[@"title"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"+ %@", activity[@"pointsValue"]];
     NSLog(@"%@", activity);
     
     return cell;
