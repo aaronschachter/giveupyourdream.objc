@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22DB2A02F48C7E40C5A71D4A /* libPods-giveupyourdream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A67D531B05F1648D351F1C23 /* libPods-giveupyourdream.a */; };
+		B2076EA91B0EE07D00C3A4F7 /* SCHSelectActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2076EA81B0EE07D00C3A4F7 /* SCHSelectActivityViewController.m */; };
 		B25E77C81B0B0E9D00F2E1B5 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B25E77C71B0B0E9D00F2E1B5 /* keys.plist */; };
 		B28D0FB91B0B031B0060A8DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B28D0FB81B0B031B0060A8DB /* main.m */; };
 		B28D0FBC1B0B031B0060A8DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B28D0FBB1B0B031B0060A8DB /* AppDelegate.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		3B21550A0F2EECAB7B26BDB4 /* Pods-giveupyourdream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giveupyourdream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giveupyourdream/Pods-giveupyourdream.debug.xcconfig"; sourceTree = "<group>"; };
 		A67D531B05F1648D351F1C23 /* libPods-giveupyourdream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-giveupyourdream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2076EA71B0EE07D00C3A4F7 /* SCHSelectActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCHSelectActivityViewController.h; path = Controllers/SCHSelectActivityViewController.h; sourceTree = "<group>"; };
+		B2076EA81B0EE07D00C3A4F7 /* SCHSelectActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCHSelectActivityViewController.m; path = Controllers/SCHSelectActivityViewController.m; sourceTree = "<group>"; };
 		B25E77C71B0B0E9D00F2E1B5 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		B28D0FB31B0B031B0060A8DB /* giveupyourdream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giveupyourdream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28D0FB71B0B031B0060A8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +87,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B2076EAA1B0EE09100C3A4F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2076EA71B0EE07D00C3A4F7 /* SCHSelectActivityViewController.h */,
+				B2076EA81B0EE07D00C3A4F7 /* SCHSelectActivityViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		B28D0FAA1B0B031B0060A8DB = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +125,9 @@
 				B28D0FBE1B0B031B0060A8DB /* ViewController.m */,
 				B28D0FC01B0B031B0060A8DB /* Main.storyboard */,
 				B28D0FC31B0B031B0060A8DB /* Images.xcassets */,
-				B28D0FC51B0B031B0060A8DB /* LaunchScreen.xib */,
+				B2076EAA1B0EE09100C3A4F7 /* Controllers */,
 				B28D0FB61B0B031B0060A8DB /* Supporting Files */,
+				B28D0FC51B0B031B0060A8DB /* LaunchScreen.xib */,
 			);
 			path = giveupyourdream;
 			sourceTree = "<group>";
@@ -284,6 +297,7 @@
 			files = (
 				B28D0FBF1B0B031B0060A8DB /* ViewController.m in Sources */,
 				B28D0FBC1B0B031B0060A8DB /* AppDelegate.m in Sources */,
+				B2076EA91B0EE07D00C3A4F7 /* SCHSelectActivityViewController.m in Sources */,
 				B28D0FB91B0B031B0060A8DB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
