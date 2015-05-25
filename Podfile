@@ -4,6 +4,7 @@
 target 'giveupyourdream' do
     pod 'Parse'
     pod 'ParseUI'
+    pod 'MMDrawerController', '~> 0.6.0'
 end
 
 target 'giveupyourdreamTests' do
